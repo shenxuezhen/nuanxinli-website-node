@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <title>编辑 - 暖心理</title>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="../css/nuanxinli.min.css" />
+    </head>
+    <body>
+    <!--头部begin-->
+    {{{headerContent}}}
+    <!-- 头部end-->
+        <div class="content">
+            <div class="container clear-fix">
+                <div class="left">
+                    <!--资料区域-->
+                    {{{editPageMassage}}}
+                </div>
+                <div class="right">
+                    <!--关注/粉丝-->
+                    <!--关注/粉丝-->
+                    <div class="user-social">
+                        <div class="wrap">
+                            {{{follow}}}
+                            {{{follow2}}}
+                        </div>
+                    </div>
+                    <!--空白-->
+                    <div class="nxl-margin-top-20"></div>
+                    <!--收藏-->
+                    <div class="magazine">
+                        <div class="nxl-box">
+                            <div class="title">
+                                我的收藏
+                            </div>
+                            <div class="body">
+                                <div class="nxl-fragment-magazine">
+                                    {{{magazine}}}
+                                </div>
+                                <div class="nxl-paging">
+                                    {{{magazinePaging}}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright ©  2016 暖心理 All Rights Reserved 京ICP备13043456号 京公网安备11010802015164
+        </div>
+    </body>
+    <script src="../lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../lib/laydate/laydate.js"></script>
+    <script src="../lib/unslider/js/unslider-min.js"></script>
+    <script src="../js/nuanxinli.min.js"></script>
+    <script>
+        viewLocalImg("portrait_src","portrait_show")();
+        function selectPortrait(){
+            $("#portrait_src").click();
+        }
+        (function() {
+            var viewFiles = document.getElementById("portrait_src");
+            var image = document.getElementById("portrait_show");
+            function viewFile(file) {
+                //通过file.size可以取得图片大小
+                var reader = new FileReader();
+                reader.onload = function(evt) {
+                    image.src = evt.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+            viewFiles.addEventListener("change", function() {
+                //通过 this.files 取到 FileList ，这里只有一个
+                viewFile(this.files[0]);
+            }, false);
+        })();
+    </script>
+</html>

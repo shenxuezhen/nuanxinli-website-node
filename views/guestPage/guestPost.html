@@ -1,0 +1,49 @@
+
+{{#each this}}
+<!--主题-->
+<div class="personalContent" >
+    <p class="title"><a href="quanquan_detail.html?page=0&size=10&Id={{postId}}">{{title}}</a></p>
+    <div class="contentTime">
+        <div class="createrMassage">
+            {{#compare type "BbsReply"}}
+            <div class="createrImg"><a href="guestPage.html?page=0&size=10&username={{postUserName}}"><img src="http://app.nuanxinli.com{{postUserphoto}}" alt=""/></a></div>
+            {{else}}
+            <div class="createrImg"><img src="http://app.nuanxinli.com{{postUserphoto}}" alt=""/></div>
+            {{/compare}}
+            <div class="creater">
+                <p class="createrName">{{postUserAlias}}</p>
+                <p class="time">{{postCreateTime}}</p>
+            </div>
+        </div>
+        {{#compare portCode "relationship"}}
+        <p class="kind">人际关系</p>
+        {{/compare}}
+        {{#compare portCode "growing"}}
+        <p class="kind">自我成长</p>
+        {{/compare}}
+        {{#compare portCode "intimacy"}}
+
+
+        <p class="kind">婚恋情感</p>
+        {{/compare}}
+        {{#compare portCode "growing"}}
+        <p class="kind">自我成长</p>
+        {{/compare}}
+        {{#compare portCode "growing"}}
+        <p class="kind">自我成长</p>
+        {{/compare}}
+    </div>
+    <p class="des">{{content}}</p>
+    <div class="bottom">
+        {{#compare type "BbsPost"}}
+        <div style="display: none">{{postId}}</div>
+        <span class="createUser">TA发的</span>
+        {{/compare}}
+        {{#compare type "BbsReply"}}
+        <div style="display: none">{{instanceId}}</div>
+        <span class="createUser" style="background: url(../img/reply.png) no-repeat">TA回的</span>
+        {{/compare}}
+        <span class="info">热度：{{hotrank}}&nbsp;&nbsp;&nbsp;评论：{{replyCount}}</span>
+    </div>
+</div>
+{{/each}}

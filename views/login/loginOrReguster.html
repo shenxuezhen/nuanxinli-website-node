@@ -1,0 +1,10 @@
+{{#compare login 1}}
+<div unselectable="on" onselectstart="return false;" class="tab no-select login on">登录</div>
+<div unselectable="on" onselectstart="return false;" class="tab no-select register">注册</div>
+<div class="opt">
+{{/compare}}
+{{#compare login 0}}
+<div unselectable="on" onselectstart="return false;" class="tab no-select login">登录</div>
+<div unselectable="on" onselectstart="return false;" class="tab no-select register on">注册</div>
+<div class="opt register">
+{{/compare}}

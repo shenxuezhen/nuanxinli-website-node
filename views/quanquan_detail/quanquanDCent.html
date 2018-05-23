@@ -1,0 +1,31 @@
+
+<div class="comments-subject">
+    <div class="content clear-fix">
+        <p class="title">{{title}}</a></p>
+        <div class="author clear-fix">
+            <a href="guestPage.html?page=0&size=10&username={{createUser}}"><img src="http://app.nuanxinli.com{{userPhoto}}" /></a>
+            <div class="text">
+                <p class="name">{{userAlias}}</p>
+                <p class="time">{{createTime}}</p>
+            </div>
+        </div>
+        <p class="content" style="font-size: 0.875em;color: #aab2bd;text-align: left;margin-top: 17px;line-height: 1.8;">{{content}}</p>
+        <span class="info">热度：{{hotrank}}&nbsp;&nbsp;&nbsp;评论：{{replyCount}}</span>
+        <div style="display: none;">{{id}}</div>
+        {{#if hasPraise}}
+        {{#compare hasPraise "YES"}}
+        <div class="praise" style="color:#fff;background:#fcab55;border-color:#fff; ">送暖 <span>{{praiseCount}}</span></div>
+        {{else}}
+        <div class="praise">送暖 <span>{{praiseCount}}</span></div>
+        {{/compare}}
+        {{/if}}
+        <div style="display: none">{{hasPraise}}</div>
+    </div>
+    <p class="kinds">{{partName}}</p>
+</div>
+<div style="display: none" id="cookie">{{cookie}}</div>
+<div id="releaseDisplay" style="display: none">
+    <div id="releaseDisplayPartCode">{{partCode}}</div>
+    <div id="releaseDisplayCreateUser">{{createUser}}</div>
+    <div id="releaseDisplayId">{{id}}</div>
+</div>

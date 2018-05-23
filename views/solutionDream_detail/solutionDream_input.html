@@ -1,0 +1,39 @@
+{{#each this}}
+<div class="dream-content">
+    <h1><span>※</span>1、亲爱哒梦到什么了？</h1>
+    <input type="text" class="dream-dada"/>
+    <h1><span>※</span>2、如果给这个梦取一个名字，那会是什么？</h1>
+    <input type="text" class="dream-name"/>
+    <h1><span>※</span>3、根据近期实际情况，请给你的生活打个分。<p>0代表最不满意，10代表最满意</p></h1>
+    <div class="grade-life">
+        <div>
+            <p class="life-type">情感</p>
+            <span>0</span>
+            <img src="../img/dream/input_red.png">
+            <p class="type1"></p>
+            <span>10</span>
+        </div>
+        <div>
+            <p class="life-type">工作</p>
+            <span>0</span>
+            <img src="../img/dream/input_blue.png">
+            <p class="type2"></p>
+            <span>10</span>
+        </div>
+        <div>
+            <p class="life-type">经济</p>
+            <span>0</span>
+            <img src="../img/dream/input_green.png">
+            <p class="type3"></p>
+            <span>10</span>
+        </div>
+    </div>
+    <h1><span>※</span>4、您最近的情绪怎样呢？</h1>
+    <select data-placeholder="平淡">
+        <option value="平淡">平淡</option>
+        <option value="忧伤">忧伤</option>
+    </select>
+    <h1><span>※</span>5、可以从您的家庭情况、爱好、人际、社会关系等方面简单地介绍下自己吗？还有通过这个梦你能联想到什么？</h1>
+    <input type="text" class="dream-dada"/>
+</div>
+{{/each}}

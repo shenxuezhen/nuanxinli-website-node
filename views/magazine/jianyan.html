@@ -1,0 +1,53 @@
+{{#each this}}
+<div class="admonition">
+    <a href="magazine_detail.html?siftId={{id}}"><img style="width: 100%;height: 515px;" src="http://app.nuanxinli.com{{image}}" alt=""/></a>
+    <div class="time">
+        <p class="name">{{typeName}}</p>
+        <p class="volume">VOL.{{VOL}}</p>
+        <p class="year-month">{{year}}.{{month}}</p>
+        <p class="day">{{date}}</p>
+    </div>
+    <div class="content">
+        <p style="display: none;">
+            <a class="event-auto-click-target" style="text-decoration: none;color: #6884E0;" href="magazine_detail.html?siftId={{id}}"></a>
+        </p>
+        <p class="des" style="margin: 10px 50px;font-size: 16px">{{descr}}</p>
+        <div style="display: none;">1</div>
+        {{#if isCollected}}
+        <span class="btn btn-favorite" style="width:55px;background-image: url(../img/icon_favorite.png)">已收藏</span>
+        {{else}}
+        <span class="btn btn-favorite"  style="background-image: url(../img/icon_favorite3.png)">收藏</span>
+        {{/if}}
+        <div style="display: none">{{isCollected}}</div>
+        <span class="btn btn-share">分享
+            <div class="sharePopup" style="overflow: hidden;width:102px;display: none; height: 57px;background-image: url(../img/shareBackground.jpg);z-index: 10">
+                <div class="weixinsmall"  data-toggle="nxl-message" data-target="#message_release"><img src="img/weixinsmall.png" alt=""/></div>
+                <div class="qqsmall" ><img src="img/qq.png" alt=""/></div>
+                <div class="weibosmall"><img src="img/weibosmall.png" alt=""/></div>
+                <!-- JiaThis Button BEGIN -->
+                <!--<div class="jiathis_style_24x24">-->
+                <!--&lt;!&ndash;<a class="jiathis_button_weixin"></a>&ndash;&gt;-->
+                <!--<a class="jiathis_button_cqq"></a>-->
+                <!--<a class="jiathis_button_tsina"></a>-->
+                <!--</div>-->
+                <!-- JiaThis Button END -->
+                <div style="display: none">
+                    {{#if detailUrl}}
+                    <input class="qr_link" type="text" value="http://app.nuanxinli.com{{detailUrl}}?id={{id}}" style="width:350px;" />
+                    {{else}}
+                    <input class="qr_link" type="text" value="http://app.nuanxinli.com{{content}}" style="width:350px;" />
+                    {{/if}}
+                    <div style="display:none">
+                        <input id="qr_capacity_l" name="qr_capacity" type="radio" value="L"/> <label for="qr_capacity_l">7%</label>
+                        <input id="qr_capacity_m" name="qr_capacity" type="radio" value="M"/> <label for="qr_capacity_m">15%</label>
+                        <input id="qr_capacity_q" name="qr_capacity" type="radio" value="Q"/> <label for="qr_capacity_q">25%</label>
+                        <input id="qr_capacity_h" name="qr_capacity" type="radio" value="H" checked/> <label for="qr_capacity_h">30%</label>
+                    </div>
+                    <div>http://qd.imeap.com{{image}}</div>
+                    <div>[{{title}}]</div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>
+{{/each}}

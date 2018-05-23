@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <title>登录 - 暖心理</title>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="../css/nuanxinli.min.css" />
+    </head>
+    <body >
+        <!--头部-->
+        <div class="header">
+            <div class="container">
+                <!--logo-->
+                <a class="logo login-page" href="index.html">
+                    <img src="../img/logo.png" />
+                </a>
+            </div>
+        </div>
+        <!--内容-->
+        <div class="login-content">
+            <div class="container clear-fix">
+                <div class="left">
+                    <img src="../img/screen_login.jpg" />
+                </div>
+                <div class="right">
+                    <div class="wrap">
+                        <!--切换tab按钮-->
+                         {{{loginOrReguster}}}
+                        <!--操作区域-->
+                            <!--登录-->
+                            <input class="username nxl-margin-top-30" type="text" placeholder="邮箱/手机号" />
+                            <input class="pwd nxl-margin-top-20" type="password" placeholder="密码" />
+                            <p class="forgot-pwd nxl-margin-top-12">
+                                <a href="forget.html">忘记密码</a>
+                            </p>
+                            <button class="btn-normal-auto nxl-margin-top-30" id="userLogin">登录</button>
+                            <!-- 第三方登录-->
+                            <!--<ol class="otherLogin">
+                                <li class="lineLogin"></li>
+                                <li class="threeLogin">第三方登录</li>
+                                <li  class="lineLogin"></li>
+                            </ol>
+                            <ol class="loginThree">
+                                <li class="weixinLogin" id="weixinLogin"></li>
+                                <li class="QQLogin event-auto-click" id="QQLogin"><a class="event-auto-click-target"
+                                        href="https://graph.qq.com/oauth2.0/authorize?response_type=token&client_id=101308577&redirect_uri=http%3A%2F%2Fwww.nuanxinli.com"></a></li>
+                                <li class="weiboLogin"></li>
+                            </ol>-->
+                            <!--注册-->
+                            <input class="username nxl-margin-top-106" style="margin-top: 206px;" id="userPhone" type="text" placeholder="邮箱/手机号" />
+                            <input class="code nxl-margin-top-14" id="userCode" type="text" placeholder="验证码" />
+                            <input type="button" id="send-code" class="send-code disable nxl-margin-top-14" value="30s" />
+                            <input class="new-pwd nxl-margin-top-14" id="userpassword" type="password" placeholder="设置密码（不少于6位）" />
+                            <button class="btn-normal-auto nxl-margin-top-30" id="userRegister">注册</button>
+                            <!-- 第三方登录-->
+                            <!--<ol class="otherLogin">
+                                <li class="lineLogin"></li>
+                                <li class="threeLogin">第三方登录</li>
+                                <li  class="lineLogin"></li>
+                            </ol>
+                            <ol class="loginThree">
+                                <li class="weixinLogin" id="weixinLogin"></li>
+                                <li class="QQLogin" id="QQLogin"></li>
+                                <li class="weiboLogin"></li>
+                            </ol>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="footer">
+            Copyright ©  2016 暖心理 All Rights Reserved 京ICP备13043456号 京公网安备11010802015164
+        </div>
+    </body>
+    <script src="../lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../lib/laydate/laydate.js"></script>
+    <script src="../lib/unslider/js/unslider-min.js"></script>
+    <script src="../js/nuanxinli.min.js"></script>
+</html>

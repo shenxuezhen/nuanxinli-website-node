@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <title>个人中心 - 暖心理</title>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="../css/nuanxinli.min.css" />
+    </head>
+    <body>
+        <!--头部begin-->
+        {{{headerContent}}}
+        <!-- 头部end-->
+        <div class="content">
+            <div class="container clear-fix">
+                <div class="left">
+                    <div class="nxl-fragment-user-homepage">
+                        <!--用户基本信息-->
+                        <div class="user">
+                            {{{personalMassage}}}
+                        </div>
+                        <!--历史记录-->
+                        <div class="record">
+                            <div class="tab">
+                                <ul class="tabs">
+                                    {{{tabs}}}
+                                </ul>
+                            </div>
+                            <div class="content">
+                                {{{personalPost}}}
+                                <div class="nxl-paging">
+                                    {{{paging}}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <!--关注/粉丝-->
+                    <div class="user-social">
+                        <div class="wrap">
+                            {{{follow}}}
+                            {{{follow2}}}
+                        </div>
+                    </div>
+                    <!--空白-->
+                    <div class="nxl-margin-top-20"></div>
+                    <!--收藏-->
+                    <div class="magazine">
+                        <div class="nxl-box">
+                            <div class="title">
+                                我的收藏
+                            </div>
+                            <div class="body">
+                                <div class="nxl-fragment-magazine">
+                                    {{{magazine}}}
+                                </div>
+                                <div class="nxl-more-simple event-auto-click">
+                                    <a class="event-auto-click-target" href="magazine.html?page=0&size=10">更多收藏>></a>
+                                    <p>·小暖·每日都有更新哦~</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright ©  2016 暖心理 All Rights Reserved 京ICP备13043456号 京公网安备11010802015164
+        </div>
+    </body>
+    <script src="../lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../lib/laydate/laydate.js"></script>
+    <script src="../lib/unslider/js/unslider-min.js"></script>
+    <script src="../js/nuanxinli.min.js"></script>
+</html>

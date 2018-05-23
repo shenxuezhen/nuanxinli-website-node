@@ -1,0 +1,92 @@
+{{#each this}}
+<div class="personalConsultation" >
+    <div class="top">
+        <div class="left">
+            <p class="title">{{dreamService.title}}</p>
+            <p class="time">{{dreamService.createTime}}</p>
+        </div>
+        <div class="right">
+            <div class="counselorImg">
+                <a href="counselor_detail.html?consultantId={{dreamService.consultant.id}}"><img src="http://app.nuanxinli.com{{dreamService.provider.photo}}" alt="counselorImg"/></a>
+            </div>
+            <div class="counselor">
+                <p class="counselorName">{{dreamService.provider.name}}</p>
+                <p class="time">暖心里认证L-{{dreamService.consultant.level}}咨询师</p>
+            </div>
+        </div>
+    </div>
+    <div class="des">{{dreamService.content}}</div>
+    <div class="bottom">
+        <div style="display: none">{{dreamService.id}}</div>
+        <span class="delete dreamDelete" >删除</span>
+        {{#if dreamService.commentLevel}}
+           <span class="evaluated">已评论
+                    <div class="commentContent">{{dreamService.commentContent}}</div>
+                </span>
+            {{#compare dreamService.commentLevel '5' }}
+            <ol class="stats">
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+            </ol>
+            {{/compare}}
+            {{#compare dreamService.commentLevel '4' }}
+            <ol class="stats">
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+            </ol>
+            {{/compare}}
+            {{#compare dreamService.commentLevel '3' }}
+            <ol class="stats">
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+            </ol>
+            {{/compare}}
+            {{#compare dreamService.commentLevel '2' }}
+            <ol class="stats">
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+            </ol>
+            {{/compare}}
+            {{#compare dreamService.commentLevel '1' }}
+            <ol class="stats">
+                <li><img src="img/start2.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+            </ol>
+            {{/compare}}
+            {{#compare dreamService.commentLevel '0' }}
+            <ol class="stats">
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+            </ol>
+            {{/compare}}
+        {{else}}
+            <span class="">评论</span>
+            <ol class="stats">
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+            </ol>
+        {{/if}}
+    </div>
+</div>
+{{/each}}

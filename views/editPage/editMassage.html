@@ -1,0 +1,168 @@
+
+<div class="nxl-fragment-user-edit">
+    <!--资料完整度-->
+    <div class="progress">
+        <div class="wrap">
+            <!--标题-->
+            <div class="title">资料完善度</div>
+            <!--进度条-->
+            <div class="bar">
+                <div class="outer">
+                    <div style="width:{{Number}};" class="inner">
+                        <div class="snail">
+                            <img src="../img/user_info_progress_snail.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--进度数字-->
+            <div class="num">{{Number}}</div>
+        </div>
+    </div>
+    <!--资料区域-->
+    <div class="info">
+        <div class="content">
+            <table>
+                <tbody>
+                <!--标题-->
+                <tr class="disabled-border">
+                    <td colspan="3">资料编辑</td>
+                </tr>
+                <tr class="nickname">
+                    <td class="w10"></td>
+                    <td class="w20">昵称</td>
+                    <td class="w80 nicknameContent">
+                        <input type="text" class="text" value="{{alias}}" />
+                    </td>
+                </tr>
+                <!--头像-->
+                <tr class="h140">
+                    <td class="w10"></td>
+                    <td class="w20">头像</td>
+                    <td class="w80 portrait">
+                        <img id="portrait_show" src="http://app.nuanxinli.com/{{photo}}" />
+                        <input style="display: none" type="file" id="portrait_src" />
+                        <button onclick="javascript: selectPortrait();">选择头像</button>
+                    </td>
+                </tr>
+                <!--性别-->
+                <tr>
+                    <td class="w10"></td>
+                    <td class="w20"><span class="warning">*</span>性别</td>
+                    <td class="w80 sex">
+                        <!--选择框-->
+                        {{#compare sexDisplay "男"}}
+                        <div class="nxl-check-box single">
+                            <div class="status on"></div>
+                            <span style="display:none;">M</span>
+                            <span class="sex">男</span>
+                        </div>
+                        <!--选择框-->
+                        <div class="nxl-check-box single">
+                            <div class="status"></div>
+                            <span style="display: none;">F</span>
+                            <span  class="sex">女</span>
+                        </div>
+                        {{/compare}}
+                        {{#compare sexDisplay "女"}}
+                        <div class="nxl-check-box single">
+                            <div class="status"></div>
+                            <span style="display:none;">M</span>
+                            <span class="sex">男</span>
+                        </div>
+                        <!--选择框-->
+                        <div class="nxl-check-box single">
+                            <div class="status on"></div>
+                            <span style="display: none;">F</span>
+                            <span  class="sex">女</span>
+                        </div>
+                        {{/compare}}
+
+                    </td>
+                </tr>
+                <!--年龄-->
+                <tr>
+                    <td class="w10"></td>
+                    <td class="w20"><span class="warning">*</span>年龄段</td>
+                    <td class="w80 age ">
+                        <span class="btn selector nxl-position-r "> {{age}}<span style="display: none" id="AgeChoice"></span>
+                            <!--选择器组件，data-api用来指明请求路径-->
+                            <table style="display: none;" data-api="" cellpadding="0" cellspacing="0" border="0" class="nxl-lib-tips">
+                                <tbody>
+                                <tr>
+                                    <!--data-params用来携带请求参数-->
+                                    <td data-params="sh">00后</td>
+                                    <td data-params="gz">90后</td>
+                                    <td data-params="lz">80后</td>
+                                </tr>
+                                <tr>
+                                    <td data-params="cq">70后</td>
+                                    <td data-params="nj">60后</td>
+                                    <td data-params="lj">60前</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </span>
+                    </td>
+                </tr>
+                <!--人物模型-->
+                <tr>
+                    <td class="w10"></td>
+                    <td class="w20"><span class="warning">*</span>人物模型</td>
+                    <td class="w80 model ">
+                        <!--{{#compare userType ""}}-->
+                        <!--<span class="btn selector nxl-position-r ">未选择<span style="display: none" id="AgeChoice"></span>-->
+                        <!--{{/compare}}-->
+                        <span class="btn selector nxl-position-r "> {{userType}}<span style="display: none" id="AgeChoice"></span>
+                            <!--选择器组件，data-api用来指明请求路径-->
+                            <table style="display: none;" data-api="" cellpadding="0" cellspacing="0" border="0" class="nxl-lib-tips">
+                                <tbody>
+                                <tr>
+                                    <!--data-params用来携带请求参数-->
+                                    <td data-params="sh">心理学小白</td>
+                                    <td data-params="gz">心理学爱好者</td>
+                                </tr>
+                                <tr>
+                                    <td data-params="cq">心里达人</td>
+                                    <td data-params="nj">心理求助</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </span>
+                    </td>
+                </tr>
+                <!--简介-->
+                <tr class="h200">
+                    <td class="w10"></td>
+                    <td class="w20">简介</td>
+                    <td class="w80 des">
+                        <textarea class="text">{{descr}}</textarea>
+                    </td>
+                </tr>
+                <!--手机号-->
+                <tr>
+                    <td class="w10"></td>
+                    <td class="w20">手机号</td>
+                    <td class="w80 phone">
+                        <input type="tel" class="text"  value="{{cellPhone}}" />
+                    </td>
+                </tr>
+                <!--邮箱-->
+                <tr>
+                    <td class="w10"></td>
+                    <td class="w20">邮箱</td>
+                    <td class="w80 email">
+                        <input type="email" class="text" value="{{email}}" />
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="opt">
+            <div style="display: none;">{{cookie}}</div>
+            <div style="display: none;">{{user}}</div>
+            <button class="preservation">保存资料</button>
+            <a class="cancelEdit" href="">取消修改</a>
+        </div>
+    </div>
+</div>

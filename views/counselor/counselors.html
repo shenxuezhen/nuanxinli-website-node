@@ -1,0 +1,49 @@
+{{#each this}}
+<!--咨询师-->
+<div class="counselor ">
+    <div class="wrap clear-fix event-auto-click">
+        <div class="inner-left">
+            <img src="http://app.nuanxinli.com/{{user.photo}}" />
+        </div>
+        <div class="inner-right">
+            <p class="name">
+                <a style="text-decoration:none;color:#000;" class="event-auto-click-target"  href="counselor_detail.html?consultantId={{consultant.id}}">{{consultant.name}}</a>
+            </p>
+            <p class="des">
+                <span>暖心里认证L-{{consultant.level}}</span>
+                {{#compare consultant.level 5}}
+                    <span> 专家级咨询师</span>
+                {{/compare}}
+                {{#compare consultant.level 4}}
+                    <span> 主任级咨询师</span>
+                {{/compare}}
+                {{#compare consultant.level 3}}
+                    <span> 副主任级咨询师</span>
+                {{/compare}}
+                {{#compare consultant.level 2}}
+                    <span> 资深级咨询师</span>
+                {{/compare}}
+                {{#compare consultant.level 1}}
+                    <span> 普通级咨询师</span>
+                {{/compare}}
+            </p>
+            <p class="idea title">
+                咨询理念:
+            </p>
+            <p class="idea des">
+               {{user.descr}}
+            </p>
+            <!--<p class="info">-->
+                <!--<span>价格：{{servicePriceList.salePrice}}</span>-->
+                <!--<span>咨询方式：面对面 |视频</span>-->
+                <!--<span>接诊时长：2000小时以上</span>-->
+                <!--<span>复诊率：98%</span>-->
+            <!--</p>-->
+            <button class="order openBDSQ"><a style="text-decoration:none;" herf="###">预约</a></button>
+        </div>
+    </div>
+
+</div>
+
+{{/each}}
+

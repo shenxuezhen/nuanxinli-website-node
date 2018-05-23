@@ -1,0 +1,95 @@
+
+{{#each this}}
+    <div class="personalConsultation" >
+        <div class="top">
+             <div class="left">
+                <p class="title">与{{consultingService.provider.name}}老师的轻咨询</p>
+                <p class="time">{{consultingService.createTime}}</p>
+            </div>
+            <div class="right">
+                <div class="counselorImg">
+                    <a href="counselor_detail.html?consultantId={{consultingService.consultant.id}}"><img src="http://app.nuanxinli.com{{consultingService.provider.photo}}" alt="counselorImg"/></a>
+                </div>
+                <div class="counselor">
+                    <p class="counselorName">{{consultingService.provider.name}}</p>
+                    <p class="time">暖心里认证L-{{consultingService.consultant.level}}咨询师</p>
+                </div>
+            </div>
+        </div>
+        <div class="des">{{consultingService.content}}</div>
+        <div class="bottom">
+            <div style="display: none">{{consultingService.id}}</div>
+            <span class="delete consultationDelete">删除</span>
+            {{#if consultingService.commentLevel}}
+                <span class="evaluated">已评论
+                 <div class="commentContent">{{consultingService.commentContent}}</div>
+                </span>
+                {{#compare consultingService.commentLevel '5' }}
+                <ol class="stats">
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                </ol>
+                {{/compare}}
+                {{#compare consultingService.commentLevel '4' }}
+                <ol class="stats">
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                </ol>
+                {{/compare}}
+                {{#compare consultingService.commentLevel '3' }}
+                <ol class="stats">
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                </ol>
+                {{/compare}}
+                {{#compare consultingService.commentLevel '2' }}
+                <ol class="stats">
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                </ol>
+                {{/compare}}
+                {{#compare consultingService.commentLevel '1' }}
+                <ol class="stats">
+                    <li><img src="img/start2.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                </ol>
+                {{/compare}}
+                {{#compare consultingService.commentLevel '0' }}
+                <ol class="stats">
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                    <li><img src="img/start1.png" alt=""/></li>
+                </ol>
+                {{/compare}}
+            {{else}}
+            <span class="">评论</span>
+            <ol class="stats">
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+                <li><img src="img/start1.png" alt=""/></li>
+            </ol>
+            {{/if}}
+        </div>
+    </div>
+{{/each}}
+
+

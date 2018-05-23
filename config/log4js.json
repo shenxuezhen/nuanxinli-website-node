@@ -1,0 +1,15 @@
+{
+    "appenders": [
+        {
+            "type": "console"
+        },
+        {
+            "type": "dateFile",
+            "filename": "logs/nxl.log",
+            "pattern": "-yyyy-MM-dd",
+            "alwaysIncludePattern": true,
+            "category":"normal"
+        }
+    ],
+    "replaceConsole":true
+}

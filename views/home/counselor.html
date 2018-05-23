@@ -1,0 +1,11 @@
+{{#each this}}
+<div class="cards event-auto-click">
+    <div class="body">
+        <img src="http://app.nuanxinli.com/{{user.photo}}" />
+        <p class="name"><a class="event-auto-click-target" href="counselor_detail.html?consultantId={{consultant.id}}">{{consultant.name}}</a></p>
+        <p class="type">{{consultant.certificationLevel}}</p>
+        <p class="des">简介：{{user.descr}}</p>
+    </div>
+    <div class="order openBDSQ"><a style="text-decoration:none;" herf="###">预约</a></div>
+</div>
+{{/each}}

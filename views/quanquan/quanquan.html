@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <title>圈圈 - 暖心理</title>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="../css/nuanxinli.min.css" />
+    </head>
+    <body>
+        <!--头部begin-->
+        {{{headerContent}}}
+        <!-- 头部end-->
+        <div class="content">
+            <div class="container clear-fix">
+                <div class="left">
+                    <div class="nxl-fragment-comments">
+                        <div class="comments">
+                            <div class="heartProblemKinds">
+                                <div class="heartLeft">
+                                    <div class="heartLeftcontent"><a href="quanquan.html?page=0&size=10&kind=all">全部</a></div>
+                                </div>
+                                <ol class="heartRight">
+                                    {{{kinds}}}
+                                </ol>
+                            </div>
+                            {{{quanquan}}}
+                            <!--查看更多评论-->
+                            <!--<div class="comments-more"><a href="#">查看更多回复>></a></div>-->
+                            <!--&lt;!&ndash;我的评论&ndash;&gt;-->
+                            <!--<div class="comments-submit">-->
+                                <!--<input type="text" placeholder="我也说几句" />-->
+                                <!--<button>发布</button>-->
+                            <!--</div>-->
+                        </div>
+                        <!--分页-->
+                        <div class="nxl-paging">
+                           {{{paging}}}
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <button data-toggle="nxl-message" data-target="#message_release" class="btn-normal-auto">我要发布心声</button>
+                    <div class="nxl-margin-top-10"></div>
+                    <div class="download">
+                        <div class="qrcode"></div>
+                        <div class="opt">
+                            <button class="btn-ios-download event-auto-click"><a target="_blank"  class="event-auto-click-target" style="text-decoration:none;color: #fff;" href="https://itunes.apple.com/cn/app/nuan-xin-li/id983939376?mt=8">ios</a></button>
+                            <button class="btn-android-download event-auto-click"><a  class="event-auto-click-target" style="text-decoration:none;color: #fff;" href="http://app.nuanxinli.com/warm/WarmApp.apk">Android</a></button>
+                        </div>
+                    </div>
+                    <div class="nxl-margin-top-20"></div>
+                    <div class="magazine">
+                        <div class="nxl-box">
+                            <div class="nxl-box-right">
+                                <div class="title">
+                                    杂志
+                                    {{{magazineData}}}
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="nxl-fragment-magazine">
+                                   {{{magazine}}}
+                                </div>
+                                <div class="nxl-more-simple event-auto-click">
+                                    <a class="event-auto-click-target" href="magazine.html?page=0&size=10">更多杂志>></a>
+                                    <p>·小暖·每日都有更新哦~</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weixin">
+                        <img src="../img/weixin.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright ©  2016 暖心理 All Rights Reserved 京ICP备13043456号 京公网安备11010802015164
+        </div>
+        <!--消息框-->
+        <div id="message_release" style="display: none;" class="nxl-message">
+            <div class="content">
+                <div class="title">
+                    发布心声
+                    <div class="close"></div>
+                </div>
+                <div class="body">
+                    <div class="wrap">
+                        <table>
+                            <tbody>
+                                <!--标题-->
+                                <tr class="h70">
+                                    <td class="w20">标题</td>
+                                    <td class="w80 title">
+                                        <div class="text-box post_title" data-toggle="input-limit" data-limit="50" data-target="input">
+                                            <input class="text" type="text " placeholder="诱人的标题会更吸引人哦" />
+                                            <!--<span class="words">0/50</span>-->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--内容-->
+                                <tr class="h210">
+                                    <td class="w20">内容</td>
+                                    <td class="w80 des">
+                                        <div class="text-box">
+                                            <textarea class="text post_content" placeholder="说说“心理”话"></textarea>
+                                            <!--<span class="words">0/2000</span>-->
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!--话题-->
+                                <tr class="h70">
+                                    <td class="w20">话题</td>
+                                    <td class="w80 topic">
+                                        <span class="btn selector nxl-position-r post_partCode">
+                                            人际关系
+                                            <!--选择器组件，data-api用来指明请求路径-->
+                                            <table style="display: none;" data-api="" cellpadding="0" cellspacing="0" border="0" class="nxl-lib-tips">
+                                                <tbody>
+                                                <tr>
+                                                    <!--data-params用来携带请求参数-->
+                                                    <td data-params="sh">人际关系</td>
+                                                    <td data-params="gz">自我成长</td>
+                                                    <td data-params="gz">婚恋感情</td>
+                                                    <td data-params="gz">知识讨论</td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-params="cq">身心健康</td>
+                                                    <td data-params="nj">学业职场</td>
+                                                    <td data-params="nj">性心理</td>
+                                                    <td data-params="nj">亲子关系</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <!--发布-->
+                                <tr class="h70">
+                                    <td class="release" colspan="2">
+                                        <!--选择框-->
+                                        <!--<div class="nxl-check-box multi">-->
+                                            <!--<div class="status"></div>-->
+                                            <!--匿名发布-->
+                                        <!--</div>-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn-normal-lg post_Release">发布</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../lib/laydate/laydate.js"></script>
+    <script src="../lib/unslider/js/unslider-min.js"></script>
+    <script src="../js/nuanxinli.min.js"></script>
+</html>

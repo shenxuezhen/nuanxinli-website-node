@@ -1,0 +1,56 @@
+
+<div class="nxl-fragment-magazine-home-d">
+    <!--配图-->
+    <!--<img src="{{image}}" style="height: 344px" />-->
+    <!--内容头部-->
+    <div class="content-header">
+        <div class="wrap">
+            <div class="subject">
+                <div class="content">
+                    <p class="title">{{title}}</p>
+                    <p class="time">
+                        <span>VOL.{{VOL}}</span>
+                        <span>{{postTime}}</span>
+                    </p>
+                    <p class="info">
+                        <span>浏览量 1245</span>
+                        <span>作者：{{author}}</span>
+                        <span>所属类别：{{typeName}}</span>
+                    </p>
+                </div>
+                <div class="opt clear-fix">
+                    <!--<button class="btn normal">收藏</button>-->
+                        {{#compare type "audio"}}
+                        <audio preload="auto" controls  src="http://app.nuanxinli.com{{content}}"></audio>
+                        {{/compare}}
+                        {{#compare type "video"}}
+                        <div class="videourl" style="display: none">{{content}}</div>
+                        <div id="video" style="height: 400px;width: 600px;">1</div>
+                        {{/compare}}
+                    <div class="share">
+                        分享到：
+                        <button class="btn share wx weixinsmall" data-toggle="nxl-message" data-target="#message_release"></button>
+                        <button class="btn share qq qqsmall"></button>
+                        <button class="btn share wb weibosmall"></button>
+                        <div style="display: none">
+                            {{#if detailUrl}}
+                            <input class="qr_link" type="text" value="http://app.nuanxinli.com{{detailUrl}}?id={{id}}" style="width:350px;" />
+                            {{else}}
+                            <input class="qr_link" type="text" value="http://app.nuanxinli.com{{content}}" style="width:350px;" />
+                            {{/if}}
+                            <div style="display:none">
+                                <input id="qr_capacity_l" name="qr_capacity" type="radio" value="L"/> <label for="qr_capacity_l">7%</label>
+                                <input id="qr_capacity_m" name="qr_capacity" type="radio" value="M"/> <label for="qr_capacity_m">15%</label>
+                                <input id="qr_capacity_q" name="qr_capacity" type="radio" value="Q"/> <label for="qr_capacity_q">25%</label>
+                                <input id="qr_capacity_h" name="qr_capacity" type="radio" value="H" checked/> <label for="qr_capacity_h">30%</label>
+                            </div>
+                            <div>http://psycholate.imeap.com{{image}}</div>
+                            <div>[{{title}}]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

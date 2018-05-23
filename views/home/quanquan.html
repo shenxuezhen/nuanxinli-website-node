@@ -1,0 +1,10 @@
+{{#each this}}
+<div class="articles qq-{{addOne @index}} event-auto-click">
+    <div class="wrap">
+        <p class="title"><a class="event-auto-click-target"  href="quanquan_detail.html?page=0&size=10&Id={{id}}">{{title}}</a></p>
+        <p class="content">{{content}}</p>
+        <span class="pv">{{hotrank}}</span>
+        <span class="comments">{{replyCount}}</span>
+    </div>
+</div>
+{{/each}}

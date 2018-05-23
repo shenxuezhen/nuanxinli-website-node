@@ -1,0 +1,16 @@
+{{#each this}}
+{{#compare bannerType "pbanner"}}
+<li>
+    <a href="banner_detail.html?source={{articleSource}}">
+        <img class="img" src="http://app.nuanxinli.com{{img}}">
+    </a>
+</li>
+{{/compare}}
+{{#compare bannerType "zbanner"}}
+<li>
+    <a href="banner_detail.html?Id={{liveId}}">
+        <img class="img" src="http://app.nuanxinli.com{{img}}">
+    </a>
+</li>
+{{/compare}}
+{{/each}}

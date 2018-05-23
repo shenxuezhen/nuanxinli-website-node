@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <title>咨询 - 暖心理</title>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="../css/slider.css" />
+        <link rel="stylesheet" type="text/css" href="../css/nuanxinli.min.css" />
+        <style>
+            .s_btn{
+                text-align: center;
+                line-height: 200%;
+                font-size: 30px;
+                color: #fff;
+                opacity:0.4;
+                filter:alpha(opacity=40);
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+    <!--头部begin-->
+    {{{headerContent}}}
+    <!-- 头部end-->
+        <div class="content">
+            <div class="container clear-fix">
+                <div class="left">
+                    <!--&lt;!&ndash;条件检索&ndash;&gt;-->
+                    <!--<div class="nxl-search">
+                        <div class="wrap">
+                            <div class="city">
+                                城市：
+                                <span class="btn selector nxl-position-r">
+                                    北京
+                                    &lt;!&ndash;选择器组件，data-api用来指明请求路径&ndash;&gt;
+                                    <table style="display: none;" data-api="api" cellpadding="0" cellspacing="0" border="0" class="nxl-lib-tips">
+                                        <tbody>
+                                        <tr>
+                                            &lt;!&ndash;data-params用来携带请求参数&ndash;&gt;
+                                            <td data-params="sh">上海</td>
+                                            <td data-params="gz">广州</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-params="cq">重庆</td>
+                                            <td data-params="nj">南京京</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </span>
+                            </div>
+                            <div class="way">
+                                方式：
+                                <span class="btn normal on">不限</span>
+                                <span class="btn normal">面对面</span>
+                                <span class="btn normal">网络</span>
+                            </div>
+                            <div class="time">
+                                时间：
+                                <span class="btn normal on">不限</span>
+                                <span class="btn normal">今天</span>
+                                <span class="btn normal">明天</span>
+                                <span class="btn normal">周末</span>
+                                <span class="btn normal">最近一周</span>
+                                <span id="laydate1" class="btn selector event-date-selector">选择时间</span>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!--咨询师区域-->
+                    <div class="nxl-fragment-counselor-home">
+                        <!--咨询师标题-->
+                        <div class="counselor-title">
+                            <div>咨询师</div>
+                        </div>
+                        <!--咨询师-->
+                        {{{counselors}}}
+                        <!--咨询师-->
+                        <!--分页-->
+                        <div class="nxl-paging">
+                        {{{paging}}}
+                        </div>
+                        <!--分页-->
+
+                    </div>
+                </div>
+                <div class="right">
+                    <!--招募令-->
+                    <div class="recruit">
+                        <img src="../img/recruit.jpg" />
+                        <p class="des">暖心理咨询师入驻计划</p>
+                        <button class="btn-normal-lg event-auto-click"><a  class="event-auto-click-target" style="text-decoration:none;color: #fff;" target="_blank" href="http://www.wenjuan.com/s/MVrUve/">申请入驻</a></button>
+                    </div>
+                    <!--空白-->
+                    <div class="nxl-margin-top-14"></div>
+                    <!--在线客服-->
+                    <div class="nxl-box">
+                        <div class="title">
+                            在线客服
+                        </div>
+                        <div class="body">
+                            <div class="ocs">
+                                <img src="../img/osc.jpg" />
+                                <button class="btn-normal-lg openBDSQ">联系客服</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--空白-->
+                    <div class="nxl-margin-top-14"></div>
+                    <!--下载app-->
+                    <div class="download">
+                        <div class="qrcode"></div>
+                        <div class="opt">
+                            <button class="btn-ios-download event-auto-click"><a target="_blank"  class="event-auto-click-target" style="text-decoration:none;color: #fff;" href="https://itunes.apple.com/cn/app/nuan-xin-li/id983939376?mt=8">ios</a></button>
+                            <button class="btn-android-download event-auto-click"><a  class="event-auto-click-target" style="text-decoration:none;color: #fff;" href="http://app.nuanxinli.com/warm/WarmApp.apk">Android</a></button>
+                        </div>
+                    </div>
+                    <!--公众号二维码-->
+                    <div class="weixin">
+                        <img src="../img/weixin.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright ©  2016 暖心理 All Rights Reserved 京ICP备13043456号 京公网安备11010802015164
+        </div>
+    </body>
+    <script src="../lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="../lib/laydate/laydate.js"></script>
+    <script src="../lib/unslider/js/unslider-min.js"></script>
+    <script src="../js/nuanxinli.min.js"></script>
+    <script src="../js/slider.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var bannerSlider = new Slider($('#banner_tabs'), {
+                time: 8000,
+                delay: 1000,
+                event: 'hover',
+                auto: true,
+                mode: 'fade',
+                controller: $('#bannerCtrl'),
+                activeControllerCls: 'active'
+            });
+            $('#banner_tabs .flex-prev').click(function() {
+                bannerSlider.prev()
+            });
+            $('#banner_tabs .flex-next').click(function() {
+                bannerSlider.next()
+            });
+        })
+    </script>
+</html>
